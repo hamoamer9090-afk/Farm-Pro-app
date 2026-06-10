@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        // Only the owner of this specific UID node can read or write data
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid",
+        
+        // Structure rules index modeling inside user node
+        "farms": {
+          "$farmId": {
+            ".indexOn": ["name", "date"]
+          }
+        }
+      }
+    },
+    
+    // Fallback block - fully prohibit random public access to any other nodes
+    "$other": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

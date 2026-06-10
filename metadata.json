@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Remix: Remix: تطبيق المزرعة  برو",
+  "description": "Converts HTML layouts and text prompts into functional Flutter mobile applications with integrated programming logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
